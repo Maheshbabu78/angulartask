@@ -1,0 +1,31 @@
+
+<div class="container">
+  <table >
+    <thead>
+      <tr>
+
+        <th>Name </th>
+        <th>Gender </th>
+        <th>Email</th>
+        <th>Status </th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataList.data">
+
+        <th>{{data.name}}</th>
+        <td>{{data.gender}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.status}}</td>
+        <td><button class="btn btn-primary" (click)="updateuser(data.id)"  >Edit</button> &nbsp; <button class="btn btn-primary" (click)="deleteUser(data.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+ <!--Including the pagination control.
+ <div class="text-right">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>-->
+
+
